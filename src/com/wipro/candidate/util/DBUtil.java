@@ -30,7 +30,7 @@ public class DBUtil {
                 "The conncetion to the database is active.");
     }
 
-    public class WrongDataException {
+    public class WrongDataException extends Exception {
     }
 
 }
