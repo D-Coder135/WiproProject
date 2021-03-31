@@ -13,6 +13,6 @@ public class DBUtil {
     private static Connection connection = null;
 
     public static Connection getDBConn() {
-        connection = DriverManager.getConnection();
+        connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
     }
