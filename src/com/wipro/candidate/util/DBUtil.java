@@ -17,11 +17,10 @@ public class DBUtil {
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException exception) {
-            System.err.println("The connection to the database could not be made."
-                    + " Please check the URL, USERNAME and PASSWORD!");
+            System.err.println("Could not connect to the database." + " Please check the URL, Username and Password");
             exception.printStackTrace();
         } finally {
-
+            printConnectionStatus();
         }
     }
 
