@@ -26,6 +26,8 @@ public class DBUtil {
     }
 
     private static void printConnectionStatus() {
+        System.out.println(connection == null ? "The connection to the database is inactive." :
+                "The conncetion to the database is active.");
     }
 
 }
