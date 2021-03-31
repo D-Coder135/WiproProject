@@ -33,7 +33,7 @@ public class DBUtil {
     public class WrongDataException extends Exception {
         @Override
         public String toString() {
-            return super.toString();
+            return "Data Incorrect";
         }
     }
 
