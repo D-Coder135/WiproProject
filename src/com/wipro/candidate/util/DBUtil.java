@@ -20,6 +20,8 @@ public class DBUtil {
             System.err.println("The connection to the database could not be made."
                     + " Please check the URL, USERNAME and PASSWORD!");
             exception.printStackTrace();
+        } finally {
+
         }
     }
 
