@@ -25,4 +25,7 @@ public class DBUtil {
         return connection;
     }
 
+    private static void printConnectionStatus() {
+    }
+
 }
