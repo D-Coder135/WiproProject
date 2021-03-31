@@ -10,4 +10,7 @@ public class DBUtil {
     private static final String PASSWORD = "";
 
     private static Connection connection = null;
-}
+
+    public static Connection getDBConn() {
+
+    }
