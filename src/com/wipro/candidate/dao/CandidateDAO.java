@@ -24,6 +24,7 @@ public class CandidateDAO {
         preparedStatement.setString(2, name);
         preparedStatement.setInt(3, m1);
         preparedStatement.setInt(4, m2);
+        preparedStatement.setInt(5, m3);
         return "TRUE";
     }
 }
