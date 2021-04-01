@@ -20,6 +20,7 @@ public class CandidateDAO {
         String result = candidateBean.getResult();
         String grade = candidateBean.getGrade();
         PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY);
+        preparedStatement.setString(1, id);
         return "TRUE";
     }
 }
