@@ -8,6 +8,7 @@ public class CandidateDAO {
             "Values (?, ?, ?, ?, ?, ?, ?)";
 
     public String addCandidate(CandidateBean candidateBean) {
+        String id = candidateBean.getId();
 
         return "TRUE";
     }
