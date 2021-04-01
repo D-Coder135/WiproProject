@@ -7,4 +7,6 @@ public class CandidateBean {
     private int m2;
     private int m3;
     private String result;
+    private String grade;
+
 }
