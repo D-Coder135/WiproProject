@@ -10,6 +10,7 @@ public class CandidateDAO {
     public String addCandidate(CandidateBean candidateBean) {
         String id = candidateBean.getId();
         String name = candidateBean.getName();
+        int m1 = candidateBean.getM1();
         return "TRUE";
     }
 }
