@@ -3,6 +3,7 @@ package com.wipro.candidate.dao;
 import com.wipro.candidate.bean.CandidateBean;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CandidateDAO {
@@ -18,7 +19,7 @@ public class CandidateDAO {
         int m3 = candidateBean.getM3();
         String result = candidateBean.getResult();
         String grade = candidateBean.getGrade();
-        connection.prepareStatement(INSERT_QUERY);
+        PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY);
         return "TRUE";
     }
 }
