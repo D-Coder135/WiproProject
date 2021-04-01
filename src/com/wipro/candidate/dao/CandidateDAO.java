@@ -9,7 +9,7 @@ public class CandidateDAO {
 
     public String addCandidate(CandidateBean candidateBean) {
         String id = candidateBean.getId();
-
+        String name = candidateBean.getName();
         return "TRUE";
     }
 }
