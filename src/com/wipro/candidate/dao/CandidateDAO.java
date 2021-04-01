@@ -22,6 +22,7 @@ public class CandidateDAO {
         PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY);
         preparedStatement.setString(1, id);
         preparedStatement.setString(2, name);
+        preparedStatement.setInt(3, m1);
         return "TRUE";
     }
 }
