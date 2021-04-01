@@ -17,7 +17,7 @@ public class CandidateDAO {
         int m3 = candidateBean.getM3();
         String result = candidateBean.getResult();
         String grade = candidateBean.getGrade();
-
+        connection.prepareStatement(INSERT_QUERY);
         return "TRUE";
     }
 }
