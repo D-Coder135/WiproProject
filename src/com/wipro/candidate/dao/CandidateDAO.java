@@ -14,6 +14,8 @@ public class CandidateDAO {
         int m2 = candidateBean.getM2();
         int m3 = candidateBean.getM3();
         String result = candidateBean.getResult();
+        String grade = candidateBean.getGrade();
+
         return "TRUE";
     }
 }
