@@ -11,6 +11,8 @@ public class CandidateDAO {
         String id = candidateBean.getId();
         String name = candidateBean.getName();
         int m1 = candidateBean.getM1();
+        int m2 = candidateBean.getM2();
+
         return "TRUE";
     }
 }
