@@ -23,6 +23,7 @@ public class CandidateDAO {
         preparedStatement.setString(1, id);
         preparedStatement.setString(2, name);
         preparedStatement.setInt(3, m1);
+        preparedStatement.setInt(4, m2);
         return "TRUE";
     }
 }
