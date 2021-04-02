@@ -82,6 +82,9 @@ public class CandidateDAO {
         ArrayList<CandidateBean> arrayList = new ArrayList<>();
         CandidateBean candidateBean = new CandidateBean();
         criteria = candidateBean.getResult();
+        if (criteria.equals("PASS")) {
+
+        }
         return arrayList;
     }
 }
