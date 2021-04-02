@@ -85,7 +85,12 @@ public class CandidateDAO {
         CandidateBean candidateBean = new CandidateBean();
         criteria = candidateBean.getResult();
         if (criteria.equals("PASS")) {
-            connection.prepareStatement(READ_QUERY_1);
+            try {
+                connection.prepareStatement(READ_QUERY_1);
+            } catch (SQLException exception) {
+                System.err.println("Exception Occured!");
+                return null;
+            }
         }
         return arrayList;
     }
