@@ -109,6 +109,8 @@ public class CandidateDAO {
                 System.err.println("Exception Occured!");
                 return null;
             }
+        } else if (criteria.equalsIgnoreCase("FAIl")) {
+
         }
         return arrayList;
     }
