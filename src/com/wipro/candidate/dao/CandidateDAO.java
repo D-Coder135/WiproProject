@@ -56,7 +56,12 @@ public class CandidateDAO {
             System.err.println("Exception Occured!");
             return "FALSE";
         }
-        preparedStatement.setString(6, result);
+        try {
+            preparedStatement.setString(6, result);
+        } catch (SQLException exception) {
+            System.err.println("Exception Occured!");
+            return "FALSE";
+        }
         preparedStatement.setString(7, grade);
         preparedStatement.executeUpdate();
         return "TRUE";
