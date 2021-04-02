@@ -81,6 +81,7 @@ public class CandidateDAO {
     public ArrayList<CandidateBean> getByResult(String criteria) {
         ArrayList<CandidateBean> arrayList = new ArrayList<>();
         CandidateBean candidateBean = new CandidateBean();
+        criteria = candidateBean.getResult();
         return arrayList;
     }
 }
