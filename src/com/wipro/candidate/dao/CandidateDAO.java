@@ -20,6 +20,7 @@ public class CandidateDAO {
     public static final String M2_COLUMN = "M2";
     public static final String M3_COLUMN = "M3";
     public static final String RESULT_COLUMN = "Result";
+    public static final String GRADE_COLUMN = "Grade";
 
     public String addCandidate(Connection connection, CandidateBean candidateBean) {
         String id = candidateBean.getId();
@@ -102,6 +103,7 @@ public class CandidateDAO {
                     int m2 = resultSet.getInt(M2_COLUMN);
                     int m3 = resultSet.getInt(M3_COLUMN);
                     String result = resultSet.getString(RESULT_COLUMN);
+                    String grade = resultSet.getString(GRADE_COLUMN);
                 }
             } catch (SQLException exception) {
                 System.err.println("Exception Occured!");
