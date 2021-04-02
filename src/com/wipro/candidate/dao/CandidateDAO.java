@@ -15,6 +15,7 @@ public class CandidateDAO {
 
     public static final String READ_QUERY_1 = "SELECT * FROM CANDIDATE_TBL WHERE Result = 'PASS';";
     public static final String ID_COLUMN = "id";
+    public static final String NAME_COLUMN = "Name";
 
     public String addCandidate(Connection connection, CandidateBean candidateBean) {
         String id = candidateBean.getId();
@@ -92,6 +93,7 @@ public class CandidateDAO {
                 ResultSet resultSet = readStatement.executeQuery();
                 while (resultSet.next()) {
                     String id = resultSet.getString(ID_COLUMN);
+                    String name = resultSet.getString(NAME_COLUMN);
                 }
             } catch (SQLException exception) {
                 System.err.println("Exception Occured!");
