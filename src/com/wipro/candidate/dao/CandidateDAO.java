@@ -80,6 +80,6 @@ public class CandidateDAO {
 
     public ArrayList<CandidateBean> getByResult(String criteria) {
         ArrayList<CandidateBean> arrayList = new ArrayList<>();
-        return null;
+        return arrayList;
     }
 }
