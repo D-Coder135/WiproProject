@@ -89,6 +89,9 @@ public class CandidateDAO {
             try {
                 PreparedStatement readStatement = connection.prepareStatement(READ_QUERY_1);
                 ResultSet resultSet = readStatement.executeQuery();
+                while (resultSet.next()) {
+
+                }
             } catch (SQLException exception) {
                 System.err.println("Exception Occured!");
                 return null;
