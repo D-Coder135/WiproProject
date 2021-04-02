@@ -87,11 +87,11 @@ public class CandidateDAO {
         if (criteria.equals("PASS")) {
             try {
                 PreparedStatement readStatement = connection.prepareStatement(READ_QUERY_1);
+                readStatement.executeQuery();
             } catch (SQLException exception) {
                 System.err.println("Exception Occured!");
                 return null;
             }
-
         }
         return arrayList;
     }
