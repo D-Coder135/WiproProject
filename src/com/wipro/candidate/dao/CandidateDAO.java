@@ -32,7 +32,11 @@ public class CandidateDAO {
             System.err.println("Exception Occured!");
             return "FALSE";
         }
-        preparedStatement.setString(2, name);
+        try {
+            preparedStatement.setString(2, name);
+        } catch (SQLException exception) {
+            System.err.println("Exception Occured!");
+        }
         preparedStatement.setInt(3, m1);
         preparedStatement.setInt(4, m2);
         preparedStatement.setInt(5, m3);
