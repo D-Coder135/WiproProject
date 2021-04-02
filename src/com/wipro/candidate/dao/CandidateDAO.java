@@ -102,6 +102,7 @@ public class CandidateDAO {
                     int m3 = resultSet.getInt(M3_COLUMN);
                     String result = resultSet.getString(RESULT_COLUMN);
                     String grade = resultSet.getString(GRADE_COLUMN);
+                    CandidateBean candidateBean = new CandidateBean(id, name, m1, m2, m3, result, grade);
                 }
             } catch (SQLException exception) {
                 System.err.println("Exception Occured!");
