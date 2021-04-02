@@ -4,6 +4,7 @@ import com.wipro.candidate.bean.CandidateBean;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -87,7 +88,7 @@ public class CandidateDAO {
         if (criteria.equals("PASS")) {
             try {
                 PreparedStatement readStatement = connection.prepareStatement(READ_QUERY_1);
-                readStatement.executeQuery();
+                ResultSet resultSet = readStatement.executeQuery();
             } catch (SQLException exception) {
                 System.err.println("Exception Occured!");
                 return null;
