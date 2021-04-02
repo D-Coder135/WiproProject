@@ -11,7 +11,7 @@ public class CandidateDAO {
     public static final String INSERT_QUERY = "Insert Into CANDIDATE_TBL (ID, Name, M1, M2, M3, Result, Grade)" +
             "Values (?, ?, ?, ?, ?, ?, ?)";
 
-    public String addCandidate(Connection connection, CandidateBean candidateBean) throws SQLException {
+    public String addCandidate(Connection connection, CandidateBean candidateBean) {
         String id = candidateBean.getId();
         String name = candidateBean.getName();
         int m1 = candidateBean.getM1();
@@ -19,7 +19,13 @@ public class CandidateDAO {
         int m3 = candidateBean.getM3();
         String result = candidateBean.getResult();
         String grade = candidateBean.getGrade();
-        PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY);
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(INSERT_QUERY);
+        } catch (SQLException exception) {
+            System.err.println("Exception Occured!");
+            return "FALSE";
+        }
         preparedStatement.setString(1, id);
         preparedStatement.setString(2, name);
         preparedStatement.setInt(3, m1);
