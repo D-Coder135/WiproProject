@@ -30,56 +30,16 @@ public class CandidateDAO {
         int m3 = candidateBean.getM3();
         String result = candidateBean.getResult();
         String grade = candidateBean.getGrade();
-        PreparedStatement preparedStatement = null;
+        PreparedStatement preparedStatement;
         try {
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-        } catch (SQLException exception) {
-            System.err.println("Exception Occured!");
-            return "FALSE";
-        }
-        try {
             preparedStatement.setString(1, id);
-        } catch (SQLException exception) {
-            System.err.println("Exception Occured!");
-            return "FALSE";
-        }
-        try {
             preparedStatement.setString(2, name);
-        } catch (SQLException exception) {
-            System.err.println("Exception Occured!");
-            return "FALSE";
-        }
-        try {
             preparedStatement.setInt(3, m1);
-        } catch (SQLException exception) {
-            System.err.println("Exception Occured!");
-            return "FALSE";
-        }
-        try {
             preparedStatement.setInt(4, m2);
-        } catch (SQLException exception) {
-            System.err.println("Exception Occured!");
-            return "FALSE";
-        }
-        try {
             preparedStatement.setInt(5, m3);
-        } catch (SQLException throwables) {
-            System.err.println("Exception Occured!");
-            return "FALSE";
-        }
-        try {
             preparedStatement.setString(6, result);
-        } catch (SQLException exception) {
-            System.err.println("Exception Occured!");
-            return "FALSE";
-        }
-        try {
             preparedStatement.setString(7, grade);
-        } catch (SQLException exception) {
-            System.err.println("Exception Occured!");
-            return "FALSE";
-        }
-        try {
             preparedStatement.executeUpdate();
         } catch (SQLException exception) {
             System.err.println("Exception Occured!");
