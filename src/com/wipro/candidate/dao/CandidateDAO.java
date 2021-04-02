@@ -12,8 +12,8 @@ public class CandidateDAO {
 
     public static final String INSERT_QUERY = "Insert Into CANDIDATE_TBL (ID, Name, M1, M2, M3, Result, Grade)" +
             "Values (?, ?, ?, ?, ?, ?, ?)";
-
     public static final String READ_QUERY_1 = "SELECT * FROM CANDIDATE_TBL WHERE Result = 'PASS';";
+    public static final String READ_QUERY_2 = "SELECT * FROM CANDIDATE_TBL WHERE Result = 'FAIL';";
     public static final String ID_COLUMN = "id";
     public static final String NAME_COLUMN = "Name";
     public static final String M1_COLUMN = "M1";
