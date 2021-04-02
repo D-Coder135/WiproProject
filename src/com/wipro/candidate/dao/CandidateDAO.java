@@ -5,6 +5,7 @@ import com.wipro.candidate.bean.CandidateBean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class CandidateDAO {
 
@@ -75,5 +76,9 @@ public class CandidateDAO {
             return "FALSE";
         }
         return "TRUE";
+    }
+
+    public ArrayList<CandidateBean> getByResult(String criteria) {
+        return null;
     }
 }
