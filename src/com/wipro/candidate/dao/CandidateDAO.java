@@ -90,9 +90,7 @@ public class CandidateDAO {
 
     public ArrayList<CandidateBean> getByResult(String criteria, Connection connection) {
         ArrayList<CandidateBean> arrayList = new ArrayList<>();
-        CandidateBean candidateBean = new CandidateBean();
-        criteria = candidateBean.getResult();
-        if (criteria.equals("PASS")) {
+        if (criteria.equalsIgnoreCase("PASS")) {
             try {
                 PreparedStatement readStatement = connection.prepareStatement(READ_QUERY_1);
                 ResultSet resultSet = readStatement.executeQuery();
