@@ -11,6 +11,7 @@ public class CandidateDAO {
 
     public static final String INSERT_QUERY = "Insert Into CANDIDATE_TBL (ID, Name, M1, M2, M3, Result, Grade)" +
             "Values (?, ?, ?, ?, ?, ?, ?)";
+
     public static final String READ_QUERY_1 = "SELECT * FROM CANDIDATE_TBL WHERE Result = 'PASS';";
 
     public String addCandidate(Connection connection, CandidateBean candidateBean) {
@@ -79,7 +80,7 @@ public class CandidateDAO {
         return "TRUE";
     }
 
-    public ArrayList<CandidateBean> getByResult(String criteria) {
+    public ArrayList<CandidateBean> getByResult(String criteria, Connection connection) {
         ArrayList<CandidateBean> arrayList = new ArrayList<>();
         CandidateBean candidateBean = new CandidateBean();
         criteria = candidateBean.getResult();
