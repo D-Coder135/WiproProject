@@ -9,6 +9,16 @@ public class CandidateBean {
     private String result;
     private String grade;
 
+    public CandidateBean(String id, String name, int m1, int m2, int m3, String result, String grade) {
+        this.id = id;
+        this.name = name;
+        this.m1 = m1;
+        this.m2 = m2;
+        this.m3 = m3;
+        this.result = result;
+        this.grade = grade;
+    }
+
     public String getId() {
         return id;
     }
