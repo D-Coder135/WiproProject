@@ -23,6 +23,7 @@ public class CandidateDAO {
     public static final String GRADE_COLUMN = "Grade";
     public static final String ID = "id";
     public static final String NAME = "Name";
+    public static final String M_1 = "M1";
 
     public String addCandidate(Connection connection, CandidateBean candidateBean) {
         String id = candidateBean.getId();
@@ -78,6 +79,7 @@ public class CandidateDAO {
                 while (resultSet.next()) {
                     String id = resultSet.getString(ID);
                     String name = resultSet.getString(NAME);
+                    int m1 = resultSet.getInt(M_1);
                 }
             } catch (SQLException exception) {
                 System.err.println("Exception Occured!");
