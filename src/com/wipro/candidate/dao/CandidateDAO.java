@@ -105,7 +105,7 @@ public class CandidateDAO {
     public String generateCandidateID(String name) {
         String finalID = "";
         for (int index = 0; index < name.length(); index++) {
-
+            char character = name.charAt(index);
         }
         return null;
     }
