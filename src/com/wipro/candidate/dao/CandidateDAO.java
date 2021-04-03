@@ -107,6 +107,9 @@ public class CandidateDAO {
         for (int index = 0; index < name.length(); index++) {
             char character = name.charAt(index);
             finalID = finalID.concat(String.valueOf(character));
+            if (finalID.length() == 2) {
+
+            }
         }
         return null;
     }
