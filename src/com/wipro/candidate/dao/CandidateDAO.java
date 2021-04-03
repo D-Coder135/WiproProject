@@ -95,6 +95,8 @@ public class CandidateDAO {
                 System.err.println("Exception Occured!");
                 return null;
             }
+        } else {
+
         }
         return arrayList;
     }
