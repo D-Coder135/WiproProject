@@ -103,6 +103,6 @@ public class CandidateDAO {
     }
 
     public String generateCandidateID(String name) {
-
+        return null;
     }
 }
