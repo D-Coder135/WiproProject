@@ -21,6 +21,7 @@ public class CandidateDAO {
     public static final String M3_COLUMN = "M3";
     public static final String RESULT_COLUMN = "Result";
     public static final String GRADE_COLUMN = "Grade";
+    public static final String ID = "id";
 
     public String addCandidate(Connection connection, CandidateBean candidateBean) {
         String id = candidateBean.getId();
@@ -74,6 +75,7 @@ public class CandidateDAO {
                 PreparedStatement readStatement = connection.prepareStatement(READ_QUERY_2);
                 ResultSet resultSet = readStatement.executeQuery();
                 while (resultSet.next()) {
+                    String id = resultSet.getString(ID);
 
                 }
             } catch (SQLException exception) {
