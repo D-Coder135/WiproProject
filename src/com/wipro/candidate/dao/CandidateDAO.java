@@ -70,7 +70,12 @@ public class CandidateDAO {
                 return null;
             }
         } else if (criteria.equalsIgnoreCase("FAIl")) {
-            PreparedStatement readStatement = connection.prepareStatement(READ_QUERY_2);
+            try {
+                PreparedStatement readStatement = connection.prepareStatement(READ_QUERY_2);
+            } catch (SQLException exception) {
+                System.err.println("Exception Occured!");
+                return null;
+            }
         }
         return arrayList;
     }
