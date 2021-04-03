@@ -111,6 +111,6 @@ public class CandidateDAO {
                 break;
             }
         }
-        return null;
+        return finalID;
     }
 }
