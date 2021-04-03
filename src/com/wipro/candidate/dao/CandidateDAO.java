@@ -96,7 +96,8 @@ public class CandidateDAO {
                 return null;
             }
         } else {
-
+            System.err.println("String entered is not appropriate!");
+            return null;
         }
         return arrayList;
     }
