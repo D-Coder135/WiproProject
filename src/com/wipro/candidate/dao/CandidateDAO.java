@@ -26,6 +26,7 @@ public class CandidateDAO {
     public static final String M_1 = "M1";
     public static final String M_2 = "M2";
     public static final String M_3 = "M3";
+    public static final String RESULT = "Result";
 
     public String addCandidate(Connection connection, CandidateBean candidateBean) {
         String id = candidateBean.getId();
@@ -84,6 +85,7 @@ public class CandidateDAO {
                     int m1 = resultSet.getInt(M_1);
                     int m2 = resultSet.getInt(M_2);
                     int m3 = resultSet.getInt(M_3);
+                    String result = resultSet.getString(RESULT);
 
                 }
             } catch (SQLException exception) {
