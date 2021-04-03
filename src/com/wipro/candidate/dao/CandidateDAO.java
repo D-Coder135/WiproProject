@@ -72,6 +72,7 @@ public class CandidateDAO {
         } else if (criteria.equalsIgnoreCase("FAIl")) {
             try {
                 PreparedStatement readStatement = connection.prepareStatement(READ_QUERY_2);
+                readStatement.executeQuery();
             } catch (SQLException exception) {
                 System.err.println("Exception Occured!");
                 return null;
