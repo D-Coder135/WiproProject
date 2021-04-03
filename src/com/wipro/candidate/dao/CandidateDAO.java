@@ -70,7 +70,7 @@ public class CandidateDAO {
                 return null;
             }
         } else if (criteria.equalsIgnoreCase("FAIl")) {
-
+            connection.prepareStatement(READ_QUERY_2);
         }
         return arrayList;
     }
