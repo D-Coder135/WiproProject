@@ -101,4 +101,8 @@ public class CandidateDAO {
         }
         return arrayList;
     }
+
+    public String generateCandidateID(String name) {
+
+    }
 }
