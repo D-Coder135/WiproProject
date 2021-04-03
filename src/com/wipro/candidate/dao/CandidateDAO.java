@@ -103,6 +103,9 @@ public class CandidateDAO {
     }
 
     public String generateCandidateID(String name) {
+        for (int index = 0; index < name.length(); index++) {
+
+        }
         return null;
     }
 }
