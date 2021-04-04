@@ -8,6 +8,6 @@ public class CandidateMain {
     }
 
     public String addCandidate(CandidateBean candidateBean) {
-
+        return null;
     }
 }
