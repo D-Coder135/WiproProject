@@ -9,34 +9,35 @@ public class CandidateMain {
 
     }
 
-    public String addCandidate(CandidateBean candidateBean) {
+    public String addCandidate(CandidateBean canBean) {
         String result = "";
         String grade = "";
         String finalResponse = "";
         try {
-            if (exceptionConditions(candidateBean)) {
+            if (exceptionConditions(canBean)) {
                 throw new WrongDataException();
             }
             CandidateDAO candidateDAO = new CandidateDAO();
-            String candidateID = candidateDAO.generateCandidateID(candidateBean.getName());
-            candidateBean.setId(candidateID);
-            if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 240) {
+            String candidateID = candidateDAO.generateCandidateID(canBean.getName());
+            canBean.setId(candidateID);
+            if (canBean.getM1() + canBean.getM2() + canBean.getM3() >= 240) {
                 result = "PASS";
                 grade = "Distinction";
-            } else if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 180 && candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() < 240) {
+            } else if (canBean.getM1() + canBean.getM2() + canBean.getM3() >= 180 && canBean.getM1() + canBean.getM2() + canBean.getM3() < 240) {
                 result = "PASS";
                 grade = "First class";
-            } else if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 150 && candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() < 180) {
+            } else if (canBean.getM1() + canBean.getM2() + canBean.getM3() >= 150 && canBean.getM1() + canBean.getM2() + canBean.getM3() < 180) {
                 result = "PASS";
                 grade = "Second class";
-            } else if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 105 && candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() < 150) {
+            } else if (canBean.getM1() + canBean.getM2() + canBean.getM3() >= 105 && canBean.getM1() + canBean.getM2() + canBean.getM3() < 150) {
                 result = "PASS";
                 grade = "Third class";
             } else {
                 result = "FAIL";
                 grade = "NO grade";
             }
-            candidateBean.setResult(result);
+            canBean.setResult(result);
+
         } catch (WrongDataException exception) {
             return exception.toString();
         }
