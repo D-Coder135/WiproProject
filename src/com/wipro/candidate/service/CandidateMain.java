@@ -37,7 +37,7 @@ public class CandidateMain {
                 grade = "NO grade";
             }
             canBean.setResult(result);
-
+            canBean.setGrade(grade);
         } catch (WrongDataException exception) {
             return exception.toString();
         }
