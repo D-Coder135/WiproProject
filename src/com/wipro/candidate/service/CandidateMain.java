@@ -5,6 +5,8 @@ import com.wipro.candidate.dao.CandidateDAO;
 import com.wipro.candidate.util.DBUtil;
 import com.wipro.candidate.util.WrongDataException;
 
+import java.util.ArrayList;
+
 public class CandidateMain {
     public static void main(String[] args) {
 
@@ -49,6 +51,10 @@ public class CandidateMain {
             return exception.toString();
         }
         return finalResponse;
+    }
+
+    public ArrayList<CandidateBean> displayAll(String criteria) {
+
     }
 
     private boolean exceptionConditions(CandidateBean candidateBean) {
