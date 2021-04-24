@@ -32,6 +32,8 @@ public class CandidateMain {
             } else if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 105 && candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() < 150) {
                 result = "PASS";
                 grade = "Third class";
+            } else {
+
             }
         } catch (WrongDataException exception) {
             return exception.toString();
