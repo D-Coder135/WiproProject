@@ -21,7 +21,8 @@ public class CandidateMain {
             String candidateID = candidateDAO.generateCandidateID(candidateBean.getName());
             candidateBean.setId(candidateID);
             if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 240) {
-
+                result = "PASS";
+                grade = "Distinction";
             }
         } catch (WrongDataException exception) {
             return exception.toString();
