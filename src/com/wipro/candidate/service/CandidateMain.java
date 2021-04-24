@@ -42,6 +42,8 @@ public class CandidateMain {
             String response = candidateDAO.addCandidate(DBUtil.getConnection(), canBean);
             if (response.equals("SUCCESS")) {
                 finalResponse = String.format("%s: %s", candidateID, result);
+            } else {
+
             }
         } catch (WrongDataException exception) {
             return exception.toString();
