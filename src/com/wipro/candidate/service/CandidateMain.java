@@ -40,6 +40,9 @@ public class CandidateMain {
             canBean.setResult(result);
             canBean.setGrade(grade);
             String response = candidateDAO.addCandidate(DBUtil.getConnection(), canBean);
+            if (response.equals("SUCCESS")) {
+
+            }
         } catch (WrongDataException exception) {
             return exception.toString();
         }
