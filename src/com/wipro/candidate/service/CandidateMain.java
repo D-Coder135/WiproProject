@@ -18,8 +18,8 @@ public class CandidateMain {
                 throw new WrongDataException();
             }
             CandidateDAO candidateDAO = new CandidateDAO();
-            String cadidateID = candidateDAO.generateCandidateID(candidateBean.getName());
-            candidateBean.setId(cadidateID);
+            String candidateID = candidateDAO.generateCandidateID(candidateBean.getName());
+            candidateBean.setId(candidateID);
         } catch (WrongDataException exception) {
             return exception.toString();
         }
