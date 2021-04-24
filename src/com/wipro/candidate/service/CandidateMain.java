@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class CandidateMain {
     public static void main(String[] args) {
         CandidateMain candidateMain = new CandidateMain();
+        String result = candidateMain.addCandidate(null);
     }
 
     public String addCandidate(CandidateBean canBean) {
