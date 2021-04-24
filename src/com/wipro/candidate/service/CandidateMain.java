@@ -48,7 +48,7 @@ public class CandidateMain {
         } catch (WrongDataException exception) {
             return exception.toString();
         }
-        return null;
+        return finalResponse;
     }
 
     private boolean exceptionConditions(CandidateBean candidateBean) {
