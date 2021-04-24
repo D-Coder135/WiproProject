@@ -60,6 +60,7 @@ public class CandidateMain {
             if (!criteria.equals("PASS") && !criteria.equals("FAIL") && !criteria.equals("ALL")) {
                 throw new WrongDataException();
             }
+            candidateLists = candidateDAO.getByResult(criteria, DBUtil.getConnection());
         } catch (WrongDataException exception) {
             return null;
         }
