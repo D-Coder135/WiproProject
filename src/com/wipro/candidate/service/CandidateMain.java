@@ -20,6 +20,9 @@ public class CandidateMain {
             CandidateDAO candidateDAO = new CandidateDAO();
             String candidateID = candidateDAO.generateCandidateID(candidateBean.getName());
             candidateBean.setId(candidateID);
+            if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 240) {
+
+            }
         } catch (WrongDataException exception) {
             return exception.toString();
         }
