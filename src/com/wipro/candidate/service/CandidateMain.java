@@ -11,6 +11,15 @@ public class CandidateMain {
         String result = "";
         String grade = "";
         String finalResponse = "";
+        if (exceptionConditions(candidateBean)) {
+
+        }
         return null;
+    }
+
+    private boolean exceptionConditions(CandidateBean candidateBean) {
+        return candidateBean == null || candidateBean.getName().isEmpty() || candidateBean.getName().length() < 2 ||
+                candidateBean.getM1() < 0 || candidateBean.getM1() > 100 || candidateBean.getM2() < 0 ||
+                candidateBean.getM2() > 100 || candidateBean.getM3() < 0 || candidateBean.getM3() > 100;
     }
 }
