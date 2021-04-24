@@ -50,9 +50,9 @@ public class CandidateDAO {
             preparedStatement.executeUpdate();
         } catch (SQLException exception) {
             System.err.println("Exception Occured!");
-            return "FALSE";
+            return "FAIL";
         }
-        return "TRUE";
+        return "SUCCESS";
     }
 
     public ArrayList<CandidateBean> getByResult(String criteria, Connection connection) {
