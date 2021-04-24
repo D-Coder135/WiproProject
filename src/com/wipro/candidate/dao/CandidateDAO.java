@@ -111,6 +111,7 @@ public class CandidateDAO {
                 break;
             }
         }
+        finalID = finalID.concat(String.valueOf(Math.random() * 2000) + 1000);
         return finalID;
     }
 }
