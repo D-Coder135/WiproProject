@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class CandidateMain {
     public static void main(String[] args) {
+        /* Sample code of the main method to test the first test case.*/
         CandidateMain candidateMain = new CandidateMain();
         String result = candidateMain.addCandidate(null);
         System.out.println(result);
