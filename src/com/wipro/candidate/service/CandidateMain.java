@@ -36,6 +36,7 @@ public class CandidateMain {
                 result = "FAIL";
                 grade = "NO grade";
             }
+            candidateBean.setResult(result);
         } catch (WrongDataException exception) {
             return exception.toString();
         }
