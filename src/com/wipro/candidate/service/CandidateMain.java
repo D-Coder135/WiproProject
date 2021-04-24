@@ -33,7 +33,8 @@ public class CandidateMain {
                 result = "PASS";
                 grade = "Third class";
             } else {
-
+                result = "FAIL";
+                grade = "NO grade";
             }
         } catch (WrongDataException exception) {
             return exception.toString();
