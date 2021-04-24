@@ -12,8 +12,12 @@ public class CandidateMain {
         String result = "";
         String grade = "";
         String finalResponse = "";
-        if (exceptionConditions(candidateBean)) {
-            throw new WrongDataException();
+        try {
+            if (exceptionConditions(candidateBean)) {
+                throw new WrongDataException();
+            }
+        } catch (WrongDataException exception) {
+            return exception.toString();
         }
         return null;
     }
