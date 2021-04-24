@@ -64,6 +64,7 @@ public class CandidateMain {
         } catch (WrongDataException exception) {
             return null;
         }
+        return candidateLists;
     }
 
     private boolean exceptionConditions(CandidateBean candidateBean) {
