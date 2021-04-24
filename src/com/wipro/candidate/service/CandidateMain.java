@@ -23,6 +23,8 @@ public class CandidateMain {
             if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 240) {
                 result = "PASS";
                 grade = "Distinction";
+            } else if (candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() >= 180 && candidateBean.getM1() + candidateBean.getM2() + candidateBean.getM3() < 240) {
+
             }
         } catch (WrongDataException exception) {
             return exception.toString();
