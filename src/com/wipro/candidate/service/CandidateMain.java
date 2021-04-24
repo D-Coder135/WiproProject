@@ -55,6 +55,7 @@ public class CandidateMain {
 
     public ArrayList<CandidateBean> displayAll(String criteria) {
         ArrayList<CandidateBean> candidateLists = new ArrayList<>();
+        CandidateDAO candidateDAO = new CandidateDAO();
     }
 
     private boolean exceptionConditions(CandidateBean candidateBean) {
