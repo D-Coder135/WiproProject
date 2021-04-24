@@ -60,8 +60,8 @@ public class CandidateMain {
             if (!criteria.equals("PASS") && !criteria.equals("FAIL") && !criteria.equals("ALL")) {
                 throw new WrongDataException();
             }
-        } catch () {
-
+        } catch (WrongDataException exception) {
+            return null;
         }
     }
 
