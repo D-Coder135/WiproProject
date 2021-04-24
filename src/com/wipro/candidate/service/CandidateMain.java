@@ -43,7 +43,7 @@ public class CandidateMain {
             if (response.equals("SUCCESS")) {
                 finalResponse = String.format("%s: %s", candidateID, result);
             } else {
-
+                finalResponse = "Error";
             }
         } catch (WrongDataException exception) {
             return exception.toString();
