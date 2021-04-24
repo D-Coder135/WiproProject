@@ -57,7 +57,9 @@ public class CandidateMain {
         ArrayList<CandidateBean> candidateLists = new ArrayList<>();
         CandidateDAO candidateDAO = new CandidateDAO();
         try {
+            if (!criteria.equals("PASS") && !criteria.equals("FAIL") && !criteria.equals("ALL")) {
 
+            }
         } catch () {
 
         }
