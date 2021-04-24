@@ -1,3 +1,8 @@
+/*   Created by IntelliJ IDEA.
+ *   Author: Devansh Shukla (D_Coder135)
+ *   File: CandidateBean.java
+ */
+
 package com.wipro.candidate.bean;
 
 public class CandidateBean {

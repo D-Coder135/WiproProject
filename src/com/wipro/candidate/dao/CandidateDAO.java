@@ -1,3 +1,8 @@
+/*   Created by IntelliJ IDEA.
+ *   Author: Devansh Shukla (D_Coder135)
+ *   File: CandidateDAO.java
+ */
+
 package com.wipro.candidate.dao;
 
 import com.wipro.candidate.bean.CandidateBean;
