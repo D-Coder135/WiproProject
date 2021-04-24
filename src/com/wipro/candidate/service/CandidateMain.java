@@ -10,6 +10,7 @@ public class CandidateMain {
     public String addCandidate(CandidateBean candidateBean) {
         String result = "";
         String grade = "";
+        String finalResponse = "";
         return null;
     }
 }
