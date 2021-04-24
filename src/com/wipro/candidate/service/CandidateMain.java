@@ -58,7 +58,7 @@ public class CandidateMain {
         CandidateDAO candidateDAO = new CandidateDAO();
         try {
             if (!criteria.equals("PASS") && !criteria.equals("FAIL") && !criteria.equals("ALL")) {
-
+                throw new WrongDataException();
             }
         } catch () {
 
