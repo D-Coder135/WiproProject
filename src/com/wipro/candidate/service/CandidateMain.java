@@ -54,7 +54,7 @@ public class CandidateMain {
     }
 
     public ArrayList<CandidateBean> displayAll(String criteria) {
-
+        ArrayList<CandidateBean> candidateLists = new ArrayList<>();
     }
 
     private boolean exceptionConditions(CandidateBean candidateBean) {
