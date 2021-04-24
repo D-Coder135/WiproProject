@@ -7,5 +7,6 @@
 
 package com.wipro.candidate.util;
 
-public class WrongDataException {
+public class WrongDataException extends Exception {
+
 }
