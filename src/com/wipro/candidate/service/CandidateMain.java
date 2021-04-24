@@ -1,6 +1,7 @@
 package com.wipro.candidate.service;
 
 import com.wipro.candidate.bean.CandidateBean;
+import com.wipro.candidate.util.WrongDataException;
 
 public class CandidateMain {
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class CandidateMain {
         String grade = "";
         String finalResponse = "";
         if (exceptionConditions(candidateBean)) {
-
+            throw new WrongDataException();
         }
         return null;
     }
