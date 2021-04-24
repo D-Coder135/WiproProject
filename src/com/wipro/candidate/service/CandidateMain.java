@@ -19,6 +19,7 @@ public class CandidateMain {
             }
             CandidateDAO candidateDAO = new CandidateDAO();
             String cadidateID = candidateDAO.generateCandidateID(candidateBean.getName());
+            candidateBean.setId(cadidateID);
         } catch (WrongDataException exception) {
             return exception.toString();
         }
