@@ -2,6 +2,7 @@ package com.wipro.candidate.service;
 
 import com.wipro.candidate.bean.CandidateBean;
 import com.wipro.candidate.dao.CandidateDAO;
+import com.wipro.candidate.util.DBUtil;
 import com.wipro.candidate.util.WrongDataException;
 
 public class CandidateMain {
@@ -38,6 +39,7 @@ public class CandidateMain {
             }
             canBean.setResult(result);
             canBean.setGrade(grade);
+            String response = candidateDAO.addCandidate(DBUtil.getConnection(), canBean);
         } catch (WrongDataException exception) {
             return exception.toString();
         }
